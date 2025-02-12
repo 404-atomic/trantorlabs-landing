@@ -9,6 +9,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { Logo } from '@/components/common/Logo';
+import { useMemo } from 'react';
 
 const socialLinks = [
   {
@@ -30,7 +31,7 @@ const socialLinks = [
 
 export const Footer = () => {
   const { t } = useTranslation();
-  const currentYear = new Date().getFullYear();
+  const currentYear = useMemo(() => new Date().getFullYear(), []);
 
   return (
     <Box
@@ -293,7 +294,7 @@ export const Footer = () => {
           <Typography
             variant="body2"
             sx={{
-              color: 'rgba(45, 50, 80, 0.7)',
+              color: 'rgba(45, 50, 80, 0.6)',
             }}
           >
             &copy; {currentYear} Trantor Labs. {t('footer.copyright')}

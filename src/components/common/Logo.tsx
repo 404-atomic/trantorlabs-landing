@@ -2,13 +2,14 @@
 
 import React from 'react';
 import { COLORS } from '@/lib/constants/theme';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, SxProps, Theme } from '@mui/material';
 
 interface LogoProps {
   className?: string;
+  sx?: SxProps<Theme>;
 }
 
-export const Logo: React.FC<LogoProps> = ({ className }) => {
+export const Logo: React.FC<LogoProps> = ({ className, sx }) => {
   return (
     <Box
       className={className}
@@ -16,6 +17,7 @@ export const Logo: React.FC<LogoProps> = ({ className }) => {
         display: 'flex',
         alignItems: 'center',
         gap: 1,
+        ...sx,
       }}
     >
       <Typography
