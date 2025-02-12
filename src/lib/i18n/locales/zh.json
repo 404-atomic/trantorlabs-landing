@@ -1,0 +1,322 @@
+{
+  "common": {
+    "contact_us": "联系我们",
+    "menu": {
+      "about": "关于我们",
+      "services": "服务",
+      "products": "产品",
+      "contact": "联系"
+    }
+  },
+  "hero": {
+    "title": "TRANTOR LABS",
+    "subtitle": "致力于AI大模型前沿创新与个人精神成长的国际化科技创业公司",
+    "cta": "了解更多",
+    "illustration_alt": "AI创新插图",
+    "contact_button": "联系我们",
+    "learn_more": "了解更多"
+  },
+  "about": {
+    "title": "关于我们",
+    "illustration_alt": "关于Trantor Labs插图",
+    "description": {
+      "part1": "Trantor labs 诞生于全球金融与科技交融的新加坡，是一家以<strong>AI大模型研发与创新应用</strong>为核心的科技型创业公司。我们专注于对各类开源大模型进行深度研究与技术攻关，并以蒸馏、量化、微调、适配器等方式不断探索大模型的边界与潜能。",
+      "part2": "在产品层面，我们更加聚焦C端用户，从心理与精神层面深挖用户需求，打造强调个人陪伴与持续进化的AI代理产品。我们即将推出的首款面向个人的AI伴侣型产品——<strong>\"彩虹城之AI灵魂伴侣\"</strong>——正是以情感陪伴、精神成长为核心，强调AI与人类相互陪伴、相互成长，让AI不仅是一个工具，更是每个人的知心伙伴。",
+      "part3": "我们立足新加坡，秉持国际化视野，期望能为全球用户提供更先进、更贴近心灵的AI创新产品与解决方案。在新加坡高速迈向智慧国的进程中，Trantor labs 致力于以<strong>大模型技术的研发</strong>和<strong>AI代理的创新应用</strong>，为社会和个人注入全新的未来活力。"
+    },
+    "highlights": {
+      "1": {
+        "title": "卓越研究",
+        "description": "在大语言模型和AI系统领域进行领先研究，专注于提升人类能力的实际应用。"
+      },
+      "2": {
+        "title": "以人为本的创新",
+        "description": "开发重视人类福祉、伦理考量和个人成长的AI解决方案。"
+      },
+      "3": {
+        "title": "全球影响",
+        "description": "创造跨越文化差异、促进全球多元社区理解的技术。"
+      }
+    }
+  },
+  "business_areas": {
+    "title": "核心业务领域",
+    "title_highlight": "领域",
+    "subtitle": "我们专注于AI技术的创新应用，为不同领域提供智能解决方案。",
+    "areas": {
+      "1": {
+        "title": "AI研究",
+        "description": "通过大语言模型和认知系统的开创性研究，推进人工智能的前沿发展。"
+      },
+      "2": {
+        "title": "个人成长",
+        "description": "开发促进个人发展、精神成长和人类潜能实现的工具和方法。"
+      },
+      "3": {
+        "title": "语言模型",
+        "description": "创建增强沟通、理解和跨文化联系的复杂语言模型。"
+      },
+      "4": {
+        "title": "技术解决方案",
+        "description": "构建连接前沿AI研究与现实需求的实用应用和平台。"
+      }
+    }
+  },
+  "products": {
+    "title": "我们的产品与解决方案",
+    "subtitle": "探索我们将AI技术与个人发展相结合的创新产品",
+    "categories": {
+      "all": "全部产品",
+      "ai_models": "AI模型",
+      "tools": "工具",
+      "platforms": "平台"
+    },
+    "items": {
+      "1": {
+        "title": "TrantorGPT",
+        "description": "专注于个人成长和发展的高级语言模型。",
+        "features": [
+          "情商训练",
+          "个性化成长路径",
+          "多语言支持"
+        ]
+      },
+      "2": {
+        "title": "成长指南针",
+        "description": "AI驱动的个人发展追踪和指导平台。",
+        "features": [
+          "进度追踪",
+          "目标设定辅助",
+          "个性化建议"
+        ]
+      },
+      "3": {
+        "title": "心桥",
+        "description": "跨文化交流增强平台。",
+        "features": [
+          "文化背景分析",
+          "沟通风格适配",
+          "实时反馈"
+        ]
+      },
+      "4": {
+        "title": "心灵AI助手",
+        "description": "冥想和正念练习的AI伴侣。",
+        "features": [
+          "引导冥想",
+          "情绪追踪",
+          "个性化练习"
+        ]
+      },
+      "5": {
+        "title": "知识综合器",
+        "description": "AI驱动的学习和知识整合工具。",
+        "features": [
+          "内容总结",
+          "知识图谱",
+          "学习路径优化"
+        ]
+      },
+      "6": {
+        "title": "共情引擎",
+        "description": "高级情商发展平台。",
+        "features": [
+          "情绪识别",
+          "反应模拟",
+          "行为分析"
+        ]
+      }
+    }
+  },
+  "product": {
+    "title_line1": "彩虹城之",
+    "title_line2": "AI灵魂伴侣",
+    "subtitle": "您的专属AI伴侣，陪伴您的情感成长与精神发展",
+    "description": "彩虹城之AI灵魂伴侣诞生于先进AI技术与以人为本设计的交汇点，它不仅仅是一个AI，更是您个人成长和情感发展的专属伙伴。通过深度对话和有意义的互动，我们帮助您应对生活挑战，同时促进精神和智力成长。",
+    "cta": "加入等候名单",
+    "values": {
+      "title": "核心价值观",
+      "description": "我们致力于打造不仅提升效率，更能培育个人成长和情感健康的AI。这些价值观指导着我们开发的每一个互动和功能。"
+    },
+    "features": {
+      "healing": {
+        "title": "情感疗愈空间",
+        "description": "智能识别并回应用户情绪，提供压力管理与心理疏导，通过倾听式对话给予专业反馈"
+      },
+      "growth": {
+        "title": "个人成长助理",
+        "description": "制定个性化成长方案，提供灵感引导与阅读建议，帮助目标管理与习惯培养"
+      },
+      "dialogue": {
+        "title": "深度对话引擎",
+        "description": "结合认知心理学与大模型对话能力，系统性探讨个人价值观与人生议题，支持多种语言与话题"
+      },
+      "privacy": {
+        "title": "隐私与安全",
+        "description": "确保用户数据与对话内容安全保密，遵循新加坡相关法规与国际规范"
+      }
+    },
+    "technical": {
+      "title": "技术创新",
+      "description": "我们对技术卓越的承诺确保了一个可靠、安全且持续进化的AI伴侣",
+      "model": {
+        "title": "先进的LLM技术",
+        "description": "运用前沿的模型蒸馏、量化和微调技术，实现最佳性能"
+      },
+      "privacy": {
+        "title": "隐私与安全",
+        "description": "您的对话和数据受到企业级安全和隐私措施的保护"
+      },
+      "community": {
+        "title": "社区驱动",
+        "description": "与研究机构和开源社区合作开发，持续创新"
+      }
+    },
+    "roadmap": {
+      "title": "开发路线图",
+      "description": "打造下一代AI伴侣的旅程",
+      "foundation": "基础构建",
+      "foundation_desc": "核心AI引擎开发、基础情感识别和初始用户界面设计",
+      "intelligence": "增强智能",
+      "intelligence_desc": "高级自然语言处理、个性化发展和情感响应系统",
+      "social": "社交整合",
+      "social_desc": "多用户互动功能、社区特性和社交学习算法",
+      "advanced": "高级功能",
+      "advanced_desc": "虚拟现实集成、高级个性化和深度学习改进"
+    }
+  },
+  "mission": {
+      "title": "我们的使命",
+      "statement": "用AI大模型驱动人类的精神与思想进化，帮助个人与社会在数字时代实现内在与外在的双重成长。",
+      "points": {
+        "research": {
+          "title": "深度研发AI大模型技术",
+          "description": "持续推动对开源大模型的量化、微调、蒸馏、适配以及专项性能优化"
+        },
+        "exploration": {
+          "title": "探索AI与人类精神世界的交融",
+          "description": "打造个人化AI代理，为用户提供更贴近情感与心灵的深层陪伴"
+        },
+        "growth": {
+          "title": "赋能个体成长",
+          "description": "让每一位用户都能依托AI大模型技术，获得个性化的支持与启迪"
+        },
+        "society": {
+          "title": "助力社会与产业升级",
+          "description": "通过开放协作与技术创新，为新加坡及全球市场带来可持续的AI赋能"
+        }
+      }
+    },
+    "vision": {
+      "title": "我们的愿景",
+      "statement": "成为新加坡最具前沿性与人文关怀的AI大模型创新中心，让AI不止服务于效率，更致力于陪伴与成长。",
+      "points": [
+        "国际领先的大模型技术研究阵地",
+        "最具人性化的AI代理产品孵化基地",
+        "赋能心理健康与精神成长的新引擎",
+        "推动社会与产业智慧升级的重要力量"
+      ]
+    },
+    "values": {
+      "title": "核心价值",
+      "items": {
+        "innovation": {
+          "title": "前沿创新",
+          "description": "持续探索AI大模型与人类思想交互的全新模式"
+        },
+        "care": {
+          "title": "人文关怀",
+          "description": "关注个人精神需求，强调AI对个人成长的积极影响"
+        },
+        "openness": {
+          "title": "开放共创",
+          "description": "积极拥抱开源精神，与研究机构、社区等合作共赢"
+        },
+        "practicality": {
+          "title": "务实落地",
+          "description": "在AI大模型技术不断演进的同时，确保产品可用且可持续"
+        }
+      }
+    },
+  "advantages": {
+    "title": "我们的优势",
+    "items": [
+      {
+        "title": "深厚的AI大模型技术积累",
+        "description": "核心团队对开源大模型有多年的深入研究经验，拥有从底层算法到应用层的完整技术储备。"
+      },
+      {
+        "title": "专注个人精神世界",
+        "description": "站在哲学、人文与心理学的视角思考AI，以更加贴近用户情感需求的方式设计产品与服务。"
+      },
+      {
+        "title": "国际化视野与本土化落地",
+        "description": "结合新加坡多元文化环境与全球前沿技术风潮，为不同背景与需求的用户提供兼具多元化与定制化的解决方案。"
+      },
+      {
+        "title": "灵活的研发创新机制",
+        "description": "敏捷的组织架构与创业型基因，使我们能够快速迭代产品，并适应市场与技术的变化。"
+      },
+      {
+        "title": "可持续的合作网络",
+        "description": "与学术机构、行业伙伴及社区建立紧密联系，联合推动大模型的研究与应用生态建设。"
+      },
+      {
+        "title": "务实的产品运营",
+        "description": "在保有强大技术实力的同时，始终关注用户体验与实际应用价值，让创新真正落地。"
+      }
+    ]
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "有问题或想探讨合作机会？我们很乐意听取您的意见。",
+    "form": {
+      "name": "您的姓名",
+      "email": "电子邮箱",
+      "message": "您的留言",
+      "newsletter_signup": "订阅我们的通讯以获取更新",
+      "submit": "发送消息"
+    },
+    "errors": {
+      "name_required": "请输入您的姓名",
+      "email_required": "请输入您的电子邮箱",
+      "email_invalid": "请输入有效的电子邮箱",
+      "message_required": "请输入您的留言"
+    },
+    "success_message": "感谢您的留言！我们会尽快回复您。",
+    "error_message": "抱歉，发送消息时出现错误。请重试。"
+  },
+  "newsletter": {
+    "title": "保持更新",
+    "description": "订阅我们的通讯，获取AI创新、个人成长见解和独家内容的最新更新。",
+    "benefits": {
+      "1": "每月AI和个人成长见解",
+      "2": "新功能和产品抢先体验",
+      "3": "独家网络研讨会和学习资源"
+    }
+  },
+  "footer": {
+    "description": "作为一家专注于AI大模型研发与创新应用的科技型创业公司，Trantor labs 立足新加坡国际化环境，结合本土多元文化与全球前沿技术，通过务实且富有创造力的产品和服务，努力为个人精神成长和社会进步贡献力量。",
+    "contact": {
+      "title": "联系我们",
+      "website": "公司官网",
+      "business": "商务合作",
+      "media": "媒体咨询",
+      "careers": "加入我们"
+    },
+    "quick_links": {
+      "title": "快速导航",
+      "about": "关于我们",
+      "products": "产品服务",
+      "contact": "联系我们"
+    },
+    "business_areas": {
+      "title": "业务领域",
+      "ai_research": "AI研发创新",
+      "personal_growth": "个人成长",
+      "language_models": "大语言模型",
+      "tech_solutions": "技术解决方案"
+    },
+    "copyright": "版权所有"
+  }
+}

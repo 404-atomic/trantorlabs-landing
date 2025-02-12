@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Language Models Icon -->
+  <rect x="15" y="15" width="30" height="30" rx="4" stroke="#F6B17A" stroke-width="2" fill="none"/>
+  
+  <!-- Text Lines -->
+  <line x1="20" y1="25" x2="40" y2="25" stroke="#F6B17A" stroke-width="2"/>
+  <line x1="20" y1="30" x2="35" y2="30" stroke="#F6B17A" stroke-opacity="0.6" stroke-width="2"/>
+  <line x1="20" y1="35" x2="38" y2="35" stroke="#F6B17A" stroke-opacity="0.3" stroke-width="2"/>
+  
+  <!-- Cursor -->
+  <rect x="38" y="33" width="2" height="4" fill="#F6B17A">
+    <animate
+      attributeName="opacity"
+      values="0;1;0"
+      dur="1.5s"
+      repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Connection Points -->
+  <circle cx="15" cy="15" r="2" fill="#F6B17A"/>
+  <circle cx="45" cy="15" r="2" fill="#F6B17A"/>
+  <circle cx="15" cy="45" r="2" fill="#F6B17A"/>
+  <circle cx="45" cy="45" r="2" fill="#F6B17A"/>
+</svg>

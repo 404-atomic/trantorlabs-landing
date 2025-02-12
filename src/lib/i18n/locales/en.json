@@ -1,0 +1,308 @@
+{
+  "common": {
+    "contact_us": "Contact Us",
+    "menu": {
+      "about": "About",
+      "services": "Services",
+      "products": "Products",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "title": "TRANTOR LABS",
+    "subtitle": "An international tech startup dedicated to AI innovation and personal spiritual growth",
+    "cta": "Learn More",
+    "illustration_alt": "AI Innovation Illustration",
+    "contact_button": "Contact Us",
+    "learn_more": "Learn More"
+  },
+  "about": {
+    "title": "About Us",
+    "illustration_alt": "About Trantor Labs Illustration",
+    "description": {
+      "part1": "Born in Singapore, where global finance meets technology, Trantor Labs is a tech startup focused on <strong>AI Large Model Research and Innovation</strong>. We specialize in deep research of various open-source large models, continuously exploring their boundaries and potential through distillation, quantization, fine-tuning, and adapters.",
+      "part2": "On the product level, we focus on individual users, deeply exploring psychological and spiritual needs to create AI agent products emphasizing personal companionship and continuous evolution. Our upcoming first AI companion product—<strong>\"Rainbow City AI Soul Companion\"</strong>—centers on emotional companionship and spiritual growth, emphasizing mutual growth between AI and humans, making AI not just a tool, but everyone's intimate partner.",
+      "part3": "Based in Singapore with a global vision, we aim to provide more advanced, spiritually connected AI innovation products and solutions for users worldwide. As Singapore rapidly advances towards becoming a Smart Nation, Trantor Labs is committed to injecting new vitality into society and individuals through <strong>large model technology research</strong> and <strong>innovative AI agent applications</strong>."
+    }
+  },
+  "business_areas": {
+    "title": "Core Business Areas",
+    "title_highlight": "Areas",
+    "subtitle": "Explore our key focus areas where we combine AI innovation with human development",
+    "areas": {
+      "1": {
+        "title": "AI Research",
+        "description": "Advancing the frontiers of artificial intelligence through groundbreaking research in large language models and cognitive systems."
+      },
+      "2": {
+        "title": "Personal Growth",
+        "description": "Developing tools and methodologies that facilitate personal development, spiritual growth, and human potential realization."
+      },
+      "3": {
+        "title": "Language Models",
+        "description": "Creating sophisticated language models that enhance communication, understanding, and cross-cultural connections."
+      },
+      "4": {
+        "title": "Tech Solutions",
+        "description": "Building practical applications and platforms that bridge the gap between cutting-edge AI research and real-world needs."
+      }
+    }
+  },
+  "products": {
+    "title": "Our Products & Solutions",
+    "subtitle": "Discover our innovative products that combine AI technology with personal development",
+    "categories": {
+      "all": "All Products",
+      "ai_models": "AI Models",
+      "tools": "Tools",
+      "platforms": "Platforms"
+    },
+    "items": {
+      "1": {
+        "title": "TrantorGPT",
+        "description": "Advanced language model specialized in personal growth and development.",
+        "features": [
+          "Emotional intelligence training",
+          "Personalized growth pathways",
+          "Multi-language support"
+        ]
+      },
+      "2": {
+        "title": "Growth Compass",
+        "description": "AI-powered personal development tracking and guidance platform.",
+        "features": [
+          "Progress tracking",
+          "Goal setting assistance",
+          "Personalized recommendations"
+        ]
+      },
+      "3": {
+        "title": "MindBridge",
+        "description": "Cross-cultural communication enhancement platform.",
+        "features": [
+          "Cultural context analysis",
+          "Communication style adaptation",
+          "Real-time feedback"
+        ]
+      },
+      "4": {
+        "title": "SpiritualAI Assistant",
+        "description": "AI companion for meditation and mindfulness practices.",
+        "features": [
+          "Guided meditation",
+          "Mood tracking",
+          "Personalized practices"
+        ]
+      },
+      "5": {
+        "title": "Knowledge Synthesis",
+        "description": "AI-powered learning and knowledge integration tool.",
+        "features": [
+          "Content summarization",
+          "Knowledge mapping",
+          "Learning path optimization"
+        ]
+      },
+      "6": {
+        "title": "EmpathyEngine",
+        "description": "Advanced emotional intelligence development platform.",
+        "features": [
+          "Emotion recognition",
+          "Response simulation",
+          "Behavioral analysis"
+        ]
+      }
+    }
+  },
+  "product": {
+    "title_line1": "Rainbow City",
+    "title_line2": "AI Soul Companion",
+    "subtitle": "Your personal AI companion for emotional growth and spiritual development",
+    "description": "Born from the intersection of advanced AI technology and human-centric design, Rainbow City AI Soul Companion is more than just an AI - it's your dedicated partner in personal growth and emotional development. Through deep conversations and meaningful interactions, we help you navigate life's challenges while fostering spiritual and intellectual growth.",
+    "cta": "Join the Waitlist",
+    "values": {
+      "title": "Our Core Values",
+      "description": "We believe in creating AI that not only serves efficiency but also nurtures personal growth and emotional well-being. Our values guide every interaction and feature we develop."
+    },
+    "features": {
+      "healing": {
+        "title": "Emotional Healing Space",
+        "description": "Intelligent emotion recognition and response, stress management and psychological guidance through empathetic dialogue"
+      },
+      "growth": {
+        "title": "Personal Growth Assistant",
+        "description": "Personalized development plans, inspirational guidance, reading recommendations, and habit cultivation"
+      },
+      "dialogue": {
+        "title": "Deep Dialogue Engine",
+        "description": "Combines cognitive psychology with advanced language models to explore personal values and life topics in multiple languages"
+      },
+      "privacy": {
+        "title": "Privacy & Security",
+        "description": "Ensures user data and conversation content security, complying with Singapore regulations and international standards"
+      }
+    },
+    "technical": {
+      "title": "Technical Innovation",
+      "description": "Our commitment to technological excellence ensures a reliable, secure, and continuously evolving companion",
+      "model": {
+        "title": "Advanced LLM Technology",
+        "description": "Utilizing cutting-edge model distillation, quantization, and fine-tuning techniques for optimal performance"
+      },
+      "privacy": {
+        "title": "Privacy & Security",
+        "description": "Your conversations and data are protected with enterprise-grade security and privacy measures"
+      },
+      "community": {
+        "title": "Community-Driven",
+        "description": "Developed in collaboration with research institutions and the open-source community"
+      }
+    },
+    "roadmap": {
+      "title": "Development Roadmap",
+      "description": "Our journey to build the next generation of AI companions",
+      "foundation": "Foundation",
+      "foundation_desc": "Core AI engine development, basic emotional recognition, and initial user interface design",
+      "intelligence": "Enhanced Intelligence",
+      "intelligence_desc": "Advanced natural language processing, personality development, and emotional response system",
+      "social": "Social Integration",
+      "social_desc": "Multi-user interaction capabilities, community features, and social learning algorithms",
+      "advanced": "Advanced Features",
+      "advanced_desc": "Virtual reality integration, advanced personalization, and deep learning improvements"
+    }
+  },
+  "mission": {
+    "title": "Our Mission",
+    "statement": "Drive human spiritual and intellectual evolution through AI large models, helping individuals and society achieve both internal and external growth in the digital age.",
+    "points": {
+      "research": {
+        "title": "Deep Research in AI Large Models",
+        "description": "Continuously advance quantization, fine-tuning, distillation, adaptation, and specialized performance optimization of open-source large models"
+      },
+      "exploration": {
+        "title": "Explore AI-Human Spiritual Integration",
+        "description": "Create personalized AI agents that provide deeper emotional and spiritual companionship for users"
+      },
+      "growth": {
+        "title": "Empower Individual Growth",
+        "description": "Enable every user to receive personalized support and inspiration through AI large model technology"
+      },
+      "society": {
+        "title": "Drive Social and Industrial Progress",
+        "description": "Bring sustainable AI empowerment to Singapore and global markets through open collaboration and technological innovation"
+      }
+    }
+  },
+  "vision": {
+    "title": "Our Vision",
+    "statement": "Become Singapore's most forward-thinking and humanistic AI large model innovation center, making AI not just about efficiency, but dedicated to companionship and growth.",
+    "points": [
+      "International Leader in Large Model Technology Research",
+      "Most Humanized AI Agent Product Incubation Base",
+      "New Engine for Mental Health and Spiritual Growth",
+      "Key Force in Driving Social and Industrial Smart Upgrade"
+    ]
+  },
+  "values": {
+    "title": "Core Values",
+    "items": {
+      "innovation": {
+        "title": "Frontier Innovation",
+        "description": "Continuously explore new modes of interaction between AI large models and human thought"
+      },
+      "care": {
+        "title": "Human Care",
+        "description": "Focus on personal spiritual needs, emphasizing AI's positive impact on personal growth"
+      },
+      "openness": {
+        "title": "Open Co-creation",
+        "description": "Actively embrace open-source spirit, collaborating with research institutions and communities"
+      },
+      "practicality": {
+        "title": "Practical Implementation",
+        "description": "Ensure product usability and sustainability while advancing AI large model technology"
+      }
+    }
+  },
+  "advantages": {
+    "title": "Our Advantages",
+    "items": [
+      {
+        "title": "Deep AI Large Model Technology Expertise",
+        "description": "Our core team has years of in-depth research experience with open-source large models, possessing complete technical reserves from underlying algorithms to application layers."
+      },
+      {
+        "title": "Focus on Personal Spiritual World",
+        "description": "We approach AI from philosophical, humanistic, and psychological perspectives, designing products and services that are more closely aligned with users' emotional needs."
+      },
+      {
+        "title": "Global Vision with Local Implementation",
+        "description": "Combining Singapore's multicultural environment with global cutting-edge technology trends to provide diverse and customized solutions for users from different backgrounds and needs."
+      },
+      {
+        "title": "Flexible R&D Innovation Mechanism",
+        "description": "Our agile organizational structure and entrepreneurial DNA enable us to iterate products quickly and adapt to market and technological changes."
+      },
+      {
+        "title": "Sustainable Cooperation Network",
+        "description": "Building close connections with academic institutions, industry partners, and communities to jointly promote research and application ecosystem development of large models."
+      },
+      {
+        "title": "Practical Product Operation",
+        "description": "While maintaining strong technical capabilities, we consistently focus on user experience and practical application value, ensuring innovation truly lands."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have questions or want to explore collaboration opportunities? We'd love to hear from you.",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "message": "Your Message",
+      "newsletter_signup": "Subscribe to our newsletter for updates",
+      "submit": "Send Message"
+    },
+    "errors": {
+      "name_required": "Please enter your name",
+      "email_required": "Please enter your email",
+      "email_invalid": "Please enter a valid email",
+      "message_required": "Please enter your message"
+    },
+    "success_message": "Thank you for your message! We'll get back to you soon.",
+    "error_message": "Sorry, there was an error sending your message. Please try again."
+  },
+  "newsletter": {
+    "title": "Stay Updated",
+    "description": "Join our newsletter to receive the latest updates on AI innovation, personal growth insights, and exclusive content.",
+    "benefits": {
+      "1": "Monthly insights on AI and personal growth",
+      "2": "Early access to new features and products",
+      "3": "Exclusive webinars and learning resources"
+    }
+  },
+  "footer": {
+    "description": "As a tech startup focused on AI large model R&D and innovative applications, Trantor Labs is based in Singapore's international environment, combining local multicultural elements with global cutting-edge technology to contribute to personal spiritual growth and social progress through practical and creative products and services.",
+    "contact": {
+      "title": "Contact Us",
+      "website": "Website",
+      "business": "Business Cooperation",
+      "media": "Media Inquiries",
+      "careers": "Join Us"
+    },
+    "quick_links": {
+      "title": "Quick Links",
+      "about": "About Us",
+      "products": "Products",
+      "contact": "Contact"
+    },
+    "business_areas": {
+      "title": "Business Areas",
+      "ai_research": "AI Research",
+      "personal_growth": "Personal Growth",
+      "language_models": "Language Models",
+      "tech_solutions": "Tech Solutions"
+    },
+    "copyright": "Copyright"
+  }
+}

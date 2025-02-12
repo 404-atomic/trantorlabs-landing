@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Grid Pattern -->
+  <defs>
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E0E7FF" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+    <!-- Gradient Definitions -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="secondaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F97316;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <rect width="800" height="600" fill="url(#grid)"/>
+
+  <!-- Central Neural Network Structure -->
+  <g transform="translate(400,300)" filter="url(#blur)">
+    <!-- Connection Lines -->
+    <g stroke-width="2" opacity="0.6">
+      <path d="M-120,-100 Q0,0 120,100" stroke="url(#primaryGradient)" />
+      <path d="M-100,-120 Q0,0 100,120" stroke="url(#secondaryGradient)" />
+      <path d="M120,-100 Q0,0 -120,100" stroke="url(#primaryGradient)" />
+      <path d="M100,-120 Q0,0 -100,120" stroke="url(#secondaryGradient)" />
+    </g>
+
+    <!-- Nodes -->
+    <g>
+      <!-- Primary Nodes -->
+      <circle cx="-120" cy="-100" r="15" fill="url(#primaryGradient)">
+        <animate attributeName="r" values="15;18;15" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="120" cy="100" r="15" fill="url(#primaryGradient)">
+        <animate attributeName="r" values="15;18;15" dur="3s" repeatCount="indefinite" begin="1s"/>
+      </circle>
+      
+      <!-- Secondary Nodes -->
+      <circle cx="120" cy="-100" r="12" fill="url(#secondaryGradient)">
+        <animate attributeName="r" values="12;15;12" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+      </circle>
+      <circle cx="-120" cy="100" r="12" fill="url(#secondaryGradient)">
+        <animate attributeName="r" values="12;15;12" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+      </circle>
+
+      <!-- Central Node -->
+      <circle cx="0" cy="0" r="25" fill="url(#primaryGradient)">
+        <animate attributeName="r" values="25;28;25" dur="3s" repeatCount="indefinite" begin="0.75s"/>
+      </circle>
+    </g>
+
+    <!-- Floating Particles -->
+    <g>
+      <circle cx="-60" cy="-50" r="4" fill="#4F46E5" opacity="0.6">
+        <animate attributeName="cy" values="-50;-45;-50" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="60" cy="50" r="4" fill="#F59E0B" opacity="0.6">
+        <animate attributeName="cy" values="50;55;50" dur="2s" repeatCount="indefinite" begin="1s"/>
+      </circle>
+      <circle cx="-40" cy="60" r="3" fill="#4F46E5" opacity="0.6">
+        <animate attributeName="cx" values="-40;-35;-40" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="40" cy="-60" r="3" fill="#F59E0B" opacity="0.6">
+        <animate attributeName="cx" values="40;45;40" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Blur Filter -->
+  <defs>
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.5"/>
+    </filter>
+  </defs>
+</svg>
