@@ -29,7 +29,8 @@ export const Advantages = () => {
     <LightbulbIcon key="practical" />,
   ];
 
-  const advantages = t('advantages.items', { returnObjects: true }) as AdvantageItem[];
+  const advantages = Object.entries(t('advantages.items', { returnObjects: true }) as Record<string, AdvantageItem>)
+    .map(([key, item]) => ({ ...item, key }));
 
   return (
     <Box
@@ -79,8 +80,8 @@ export const Advantages = () => {
           </Typography>
 
           <Grid container spacing={3}>
-            {advantages.map((item: AdvantageItem, index: number) => (
-              <Grid item xs={12} sm={6} md={4} key={index}>
+            {advantages.map((item, index) => (
+              <Grid item xs={12} sm={6} md={4} key={item.key}>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}

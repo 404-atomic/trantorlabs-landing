@@ -1,16 +1,22 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { AppBar, Toolbar, Button, IconButton, Box, Menu, MenuItem } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { Logo } from '@/components/common/Logo';
 import LanguageIcon from '@mui/icons-material/Language';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
+import i18n from '@/lib/i18n/client';
 
 export const Header = () => {
-  const { t, i18n } = useTranslation();
+  const [mounted, setMounted] = useState(false);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -24,6 +30,11 @@ export const Header = () => {
     i18n.changeLanguage(lang);
     handleClose();
   };
+
+  // Prevent hydration mismatch by not rendering anything until mounted
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <AppBar position="fixed" color="transparent" elevation={0} sx={{ backdropFilter: 'blur(8px)' }}>

@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import {
   Box,
   Container,
@@ -8,7 +9,6 @@ import {
   AccordionSummary,
   AccordionDetails,
   Grid,
-  useTheme,
   Card,
   Divider,
   Chip,
@@ -20,11 +20,23 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import DiamondIcon from '@mui/icons-material/Diamond';
-import { useState } from 'react';
+
+interface Point {
+  title: string;
+  description: string;
+}
+
+interface TranslatedPoints {
+  [key: string]: Point;
+}
+
+interface ValueItem {
+  title: string;
+  description: string;
+}
 
 export const MissionVision = () => {
   const { t } = useTranslation();
-  const theme = useTheme();
   const [expanded, setExpanded] = useState<string | false>('mission');
 
   const handleChange = (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
@@ -118,22 +130,17 @@ export const MissionVision = () => {
                     transition={{ duration: 0.3 }}
                   >
                     <Typography
-                      variant="h6"
-                      sx={{
-                        mb: 4,
-                        fontWeight: 500,
-                        textAlign: 'center',
-                        color: 'rgba(255, 255, 255, 0.9)',
-                        maxWidth: '80%',
-                        mx: 'auto',
-                        lineHeight: 1.8,
+                      component="div"
+                      dangerouslySetInnerHTML={{
+                        __html: t('mission_vision.mission.description', {
+                          interpolation: { escapeValue: false },
+                        } as { interpolation: { escapeValue: boolean } }),
                       }}
-                    >
-                      {t('mission.statement')}
-                    </Typography>
+                      sx={{ mb: 2 }}
+                    />
                     <Divider sx={{ mb: 4, borderColor: 'rgba(255, 255, 255, 0.1)' }} />
                     <Grid container spacing={3}>
-                      {Object.entries(t('mission.points', { returnObjects: true })).map(([key, point]: [string, any], index) => (
+                      {Object.entries(t('mission.points', { returnObjects: true }) as TranslatedPoints).map(([key, point], index) => (
                         <Grid item xs={12} sm={6} key={key}>
                           <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -189,23 +196,18 @@ export const MissionVision = () => {
                     transition={{ duration: 0.3 }}
                   >
                     <Typography
-                      variant="h6"
-                      sx={{
-                        mb: 4,
-                        fontWeight: 500,
-                        textAlign: 'center',
-                        color: 'rgba(255, 255, 255, 0.9)',
-                        maxWidth: '80%',
-                        mx: 'auto',
-                        lineHeight: 1.8,
+                      component="div"
+                      dangerouslySetInnerHTML={{
+                        __html: t('mission_vision.vision.description', {
+                          interpolation: { escapeValue: false },
+                        } as { interpolation: { escapeValue: boolean } }),
                       }}
-                    >
-                      {t('vision.statement')}
-                    </Typography>
+                      sx={{ mb: 2 }}
+                    />
                     <Divider sx={{ mb: 4, borderColor: 'rgba(255, 255, 255, 0.1)' }} />
                     <Grid container spacing={2}>
-                      {(t('vision.points', { returnObjects: true }) as string[]).map((point, index) => (
-                        <Grid item xs={12} sm={6} md={3} key={index}>
+                      {Object.entries(t('vision.points', { returnObjects: true }) as TranslatedPoints).map(([key, point], index) => (
+                        <Grid item xs={12} sm={6} md={3} key={key}>
                           <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -220,7 +222,7 @@ export const MissionVision = () => {
                                 textAlign: 'center' 
                               }}>
                                 <Typography sx={{ color: 'rgba(255, 255, 255, 0.9)', lineHeight: 1.7 }}>
-                                  {point}
+                                  {point.title}
                                 </Typography>
                               </Box>
                             </ContentCard>
@@ -264,7 +266,7 @@ export const MissionVision = () => {
                     transition={{ duration: 0.3 }}
                   >
                     <Grid container spacing={3}>
-                      {Object.entries(t('values.items', { returnObjects: true })).map(([key, value]: [string, any], index) => (
+                      {Object.entries(t('values.items', { returnObjects: true })).map(([key, value]: [string, ValueItem], index) => (
                         <Grid item xs={12} sm={6} md={3} key={key}>
                           <motion.div
                             initial={{ opacity: 0, y: 20 }}

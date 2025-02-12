@@ -5,13 +5,13 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import resourcesToBackend from 'i18next-resources-to-backend';
 
-// Only initialize i18next once
+// Create a singleton instance
 const i18nInstance = i18next.createInstance();
 
 i18nInstance
   .use(initReactI18next)
   .use(LanguageDetector)
-  .use(resourcesToBackend((language: string, namespace: string) => 
+  .use(resourcesToBackend((language: string) => 
     import(`./locales/${language}.json`).then(module => module.default)
   ))
   .init({
@@ -25,11 +25,14 @@ i18nInstance
     // SSR settings
     react: {
       useSuspense: false, // Disable suspense for SSR
+      transEmptyNodeValue: '', // Return empty string for empty nodes
+      transSupportBasicHtmlNodes: true, // Support basic HTML nodes
     },
     detection: {
-      order: ['querystring', 'cookie', 'localStorage', 'navigator'],
-      caches: ['cookie', 'localStorage'],
+      order: ['path', 'htmlTag'], // Only use stable detection methods for SSR
+      caches: [], // Disable caching for SSR
     },
+    preload: ['en'], // Preload default language
   });
 
 export default i18nInstance;

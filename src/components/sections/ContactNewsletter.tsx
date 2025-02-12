@@ -82,7 +82,8 @@ export const ContactNewsletter = () => {
         email: '',
         message: '',
       });
-    } catch (error) {
+    } catch (err) {
+      console.error('Contact form submission error:', err);
       setSnackbar({
         open: true,
         message: t('contact.error_message'),

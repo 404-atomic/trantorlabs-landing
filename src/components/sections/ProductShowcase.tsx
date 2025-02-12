@@ -1,8 +1,8 @@
 'use client';
 
-import { Box, Container, Grid, Typography, Button, useTheme, Paper, Stack, Tabs, Tab } from '@mui/material';
-import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot, TimelineOppositeContent } from '@mui/lab';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { Box, Container, Grid, Typography, Button, useTheme, Paper, Tabs, Tab } from '@mui/material';
+import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot } from '@mui/lab';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { COLORS } from '@/lib/constants/theme';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
@@ -18,13 +18,6 @@ export const ProductShowcase = () => {
   const { t } = useTranslation();
   const theme = useTheme();
   const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start end', 'end start'],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
