@@ -6,10 +6,11 @@ import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { COLORS } from '@/lib/constants/theme';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import XIcon from '@mui/icons-material/X';
+import EmailIcon from '@mui/icons-material/Email';
 import { Logo } from '@/components/common/Logo';
 import { useMemo } from 'react';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const socialLinks = [
   {
@@ -18,20 +19,27 @@ const socialLinks = [
     href: 'https://github.com/TrantorLabs',
   },
   {
-    name: 'LinkedIn',
-    icon: LinkedInIcon,
-    href: 'https://linkedin.com/company/trantorlabs',
+    name: 'X',
+    icon: XIcon,
+    href: 'https://x.com/TrantorLabs',
   },
   {
-    name: 'Twitter',
-    icon: TwitterIcon,
-    href: 'https://twitter.com/TrantorLabs',
+    name: 'WhatsApp',
+    icon: WhatsAppIcon,
+    href: 'https://wa.me/65891000000',
   },
 ];
 
 export const Footer = () => {
   const { t } = useTranslation();
   const currentYear = useMemo(() => new Date().getFullYear(), []);
+
+  const quickLinks = [
+    { id: 'about', label: t('footer.quick_links.about') },
+    { id: 'mission-vision', label: t('footer.quick_links.mission_vision') },
+    { id: 'products', label: t('footer.quick_links.products') },
+    { id: 'advantages', label: t('footer.quick_links.advantages') },
+  ];
 
   return (
     <Box
@@ -46,7 +54,7 @@ export const Footer = () => {
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           {/* Logo and Description */}
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={5}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -93,7 +101,7 @@ export const Footer = () => {
           </Grid>
 
           {/* Quick Links */}
-          <Grid item xs={12} sm={6} md={2}>
+          <Grid item xs={12} sm={6} md={4}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -116,15 +124,17 @@ export const Footer = () => {
                   listStyle: 'none',
                   p: 0,
                   m: 0,
+                  columns: 1,
+                  columnGap: 4,
                 }}
               >
-                {['about', 'products', 'contact'].map((item) => (
+                {quickLinks.map((link) => (
                   <Box
                     component="li"
-                    key={item}
+                    key={link.id}
                     sx={{ mb: 1 }}
                   >
-                    <Link href={`#${item}`} passHref legacyBehavior>
+                    <Link href={`#${link.id}`} passHref legacyBehavior>
                       <MuiLink
                         sx={{
                           color: 'rgba(45, 50, 80, 0.7)',
@@ -134,7 +144,7 @@ export const Footer = () => {
                           },
                         }}
                       >
-                        {t(`footer.quick_links.${item}`)}
+                        {link.label}
                       </MuiLink>
                     </Link>
                   </Box>
@@ -143,8 +153,8 @@ export const Footer = () => {
             </motion.div>
           </Grid>
 
-          {/* Business Areas */}
-          <Grid item xs={12} sm={6} md={3}>
+          {/* Contact Info */}
+          <Grid item xs={12} md={3}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -159,124 +169,35 @@ export const Footer = () => {
                   fontWeight: 600,
                 }}
               >
-                {t('footer.business_areas.title')}
-              </Typography>
-              <Box
-                component="ul"
-                sx={{
-                  listStyle: 'none',
-                  p: 0,
-                  m: 0,
-                }}
-              >
-                {['ai_research', 'personal_growth', 'language_models', 'tech_solutions'].map((item) => (
-                  <Box
-                    component="li"
-                    key={item}
-                    sx={{ mb: 1 }}
-                  >
-                    <MuiLink
-                      href="#business-areas"
-                      sx={{
-                        color: 'rgba(45, 50, 80, 0.7)',
-                        textDecoration: 'none',
-                        '&:hover': {
-                          color: COLORS.secondary.main,
-                        },
-                      }}
-                    >
-                      {t(`footer.business_areas.${item}`)}
-                    </MuiLink>
-                  </Box>
-                ))}
-              </Box>
-            </motion.div>
-          </Grid>
-
-          {/* Contact Info */}
-          <Grid item xs={12} md={3}>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <Typography
-                variant="h6"
-                sx={{
-                  color: '#2D3250',
-                  mb: 2,
-                  fontWeight: 600,
-                }}
-              >
                 {t('footer.contact.title')}
               </Typography>
-              <Box
-                component="ul"
-                sx={{
-                  listStyle: 'none',
-                  p: 0,
-                  m: 0,
-                }}
-              >
-                <Box component="li" sx={{ mb: 1 }}>
-                  <MuiLink
-                    href="https://trantorlabs.sg"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{
-                      color: 'rgba(45, 50, 80, 0.7)',
-                      textDecoration: 'none',
-                      '&:hover': {
-                        color: COLORS.secondary.main,
-                      },
-                    }}
-                  >
-                    {t('footer.contact.website')}: trantorlabs.sg
-                  </MuiLink>
-                </Box>
-                <Box component="li" sx={{ mb: 1 }}>
-                  <MuiLink
-                    href="mailto:business@trantorlabs.sg"
-                    sx={{
-                      color: 'rgba(45, 50, 80, 0.7)',
-                      textDecoration: 'none',
-                      '&:hover': {
-                        color: COLORS.secondary.main,
-                      },
-                    }}
-                  >
-                    {t('footer.contact.business')}: business@trantorlabs.sg
-                  </MuiLink>
-                </Box>
-                <Box component="li" sx={{ mb: 1 }}>
-                  <MuiLink
-                    href="mailto:media@trantorlabs.sg"
-                    sx={{
-                      color: 'rgba(45, 50, 80, 0.7)',
-                      textDecoration: 'none',
-                      '&:hover': {
-                        color: COLORS.secondary.main,
-                      },
-                    }}
-                  >
-                    {t('footer.contact.media')}: media@trantorlabs.sg
-                  </MuiLink>
-                </Box>
-                <Box component="li" sx={{ mb: 1 }}>
-                  <MuiLink
-                    href="mailto:careers@trantorlabs.sg"
-                    sx={{
-                      color: 'rgba(45, 50, 80, 0.7)',
-                      textDecoration: 'none',
-                      '&:hover': {
-                        color: COLORS.secondary.main,
-                      },
-                    }}
-                  >
-                    {t('footer.contact.careers')}: careers@trantorlabs.sg
-                  </MuiLink>
-                </Box>
+              <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                <IconButton
+                  component="a"
+                  href="mailto:contact@trantorlabs.io"
+                  sx={{
+                    color: 'rgba(45, 50, 80, 0.7)',
+                    p: 0,
+                    mr: 1,
+                    '&:hover': {
+                      color: COLORS.secondary.main,
+                    },
+                  }}
+                >
+                  <EmailIcon />
+                </IconButton>
+                <MuiLink
+                  href="mailto:contact@trantorlabs.io"
+                  sx={{
+                    color: 'rgba(45, 50, 80, 0.7)',
+                    textDecoration: 'none',
+                    '&:hover': {
+                      color: COLORS.secondary.main,
+                    },
+                  }}
+                >
+                  contact@trantorlabs.io
+                </MuiLink>
               </Box>
             </motion.div>
           </Grid>
@@ -285,7 +206,7 @@ export const Footer = () => {
         {/* Copyright */}
         <Box
           sx={{
-            mt: 8,
+            mt: 6,
             pt: 3,
             borderTop: '1px solid rgba(45, 50, 80, 0.1)',
             textAlign: 'center',
@@ -293,9 +214,7 @@ export const Footer = () => {
         >
           <Typography
             variant="body2"
-            sx={{
-              color: 'rgba(45, 50, 80, 0.6)',
-            }}
+            sx={{ color: 'rgba(45, 50, 80, 0.7)' }}
           >
             &copy; {currentYear} Trantor Labs. {t('footer.copyright')}
           </Typography>

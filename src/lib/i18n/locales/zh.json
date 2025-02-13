@@ -302,25 +302,19 @@
   "footer": {
     "description": "作为一家专注于AI大模型研发与创新应用的科技型创业公司，Trantor labs 立足新加坡国际化环境，结合本土多元文化与全球前沿技术，通过务实且富有创造力的产品和服务，努力为个人精神成长和社会进步贡献力量。",
     "contact": {
-      "title": "联系我们",
-      "website": "公司官网",
-      "business": "商务合作",
-      "media": "媒体咨询",
-      "careers": "加入我们"
+      "email": "contact@trantorlabs.io"
     },
     "quick_links": {
-      "title": "快速导航",
+      "title": "快速链接",
       "about": "关于我们",
-      "products": "产品服务",
-      "contact": "联系我们"
+      "mission_vision": "使命愿景",
+      "products": "产品",
+      "advantages": "优势"
     },
-    "business_areas": {
-      "title": "业务领域",
-      "ai_research": "AI研发创新",
-      "personal_growth": "个人成长",
-      "language_models": "大语言模型",
-      "tech_solutions": "技术解决方案"
+    "contact": {
+      "title": "联系我们",
+      "email": "contact@trantorlabs.io"
     },
-    "copyright": "版权所有"
+    "copyright": "版权所有。"
   }
 }

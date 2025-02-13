@@ -289,24 +289,19 @@
     "description": "As a tech startup focused on AI large model R&D and innovative applications, Trantor Labs is based in Singapore's international environment, combining local multicultural elements with global cutting-edge technology to contribute to personal spiritual growth and social progress through practical and creative products and services.",
     "contact": {
       "title": "Contact Us",
-      "website": "Website",
-      "business": "Business Cooperation",
-      "media": "Media Inquiries",
-      "careers": "Join Us"
+      "email": "contact@trantorlabs.io"
     },
     "quick_links": {
       "title": "Quick Links",
       "about": "About Us",
+      "mission_vision": "Mission & Vision",
       "products": "Products",
-      "contact": "Contact"
+      "advantages": "Advantages"
     },
-    "business_areas": {
-      "title": "Business Areas",
-      "ai_research": "AI Research",
-      "personal_growth": "Personal Growth",
-      "language_models": "Language Models",
-      "tech_solutions": "Tech Solutions"
+    "contact": {
+      "title": "Contact Us",
+      "email": "contact@trantorlabs.io"
     },
-    "copyright": "Copyright"
+    "copyright": "All rights reserved."
   }
 }
