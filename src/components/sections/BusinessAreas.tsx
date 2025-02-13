@@ -54,9 +54,10 @@ export const BusinessAreas = () => {
   return (
     <Box
       component="section"
+      id="business-areas"
       sx={{
-        py: { xs: 10, md: 15 },
-        background: `linear-gradient(135deg, ${COLORS.primary.dark} 0%, ${COLORS.primary.main} 100%)`,
+        py: { xs: 8, md: 12 },
+        background: `linear-gradient(180deg, ${COLORS.primary.dark}, ${COLORS.primary.main})`,
         color: 'white',
       }}
     >

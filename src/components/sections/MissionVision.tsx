@@ -83,6 +83,7 @@ export const MissionVision = () => {
   return (
     <Box
       component="section"
+      id="mission-vision"
       sx={{
         py: { xs: 10, md: 15 },
         background: `linear-gradient(135deg, ${COLORS.primary.dark}, ${COLORS.primary.main})`,
@@ -132,7 +133,7 @@ export const MissionVision = () => {
                     <Typography
                       component="div"
                       dangerouslySetInnerHTML={{
-                        __html: t('mission_vision.mission.description', {
+                        __html: t('mission.statement', {
                           interpolation: { escapeValue: false },
                         } as { interpolation: { escapeValue: boolean } }),
                       }}
@@ -198,7 +199,7 @@ export const MissionVision = () => {
                     <Typography
                       component="div"
                       dangerouslySetInnerHTML={{
-                        __html: t('mission_vision.vision.description', {
+                        __html: t('vision.statement', {
                           interpolation: { escapeValue: false },
                         } as { interpolation: { escapeValue: boolean } }),
                       }}
@@ -206,23 +207,21 @@ export const MissionVision = () => {
                     />
                     <Divider sx={{ mb: 4, borderColor: 'rgba(255, 255, 255, 0.1)' }} />
                     <Grid container spacing={2}>
-                      {Object.entries(t('vision.points', { returnObjects: true }) as TranslatedPoints).map(([key, point], index) => (
+                      {Object.entries(t('vision.points', { returnObjects: true }) as TranslatedPoints).map(([key, point]) => (
                         <Grid item xs={12} sm={6} md={3} key={key}>
                           <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: index * 0.1 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                           >
                             <ContentCard>
                               <Box sx={{ 
-                                height: '100%', 
                                 display: 'flex', 
                                 alignItems: 'center', 
                                 justifyContent: 'center',
                                 textAlign: 'center' 
                               }}>
                                 <Typography sx={{ color: 'rgba(255, 255, 255, 0.9)', lineHeight: 1.7 }}>
-                                  {point.title}
+                                  {point.description}
                                 </Typography>
                               </Box>
                             </ContentCard>

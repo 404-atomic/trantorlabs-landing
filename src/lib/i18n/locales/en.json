@@ -3,8 +3,10 @@
     "contact_us": "Contact Us",
     "menu": {
       "about": "About",
-      "services": "Services",
+      "business_areas": "Business Areas",
       "products": "Products",
+      "mission_vision": "Mission & Vision",
+      "advantages": "Advantages",
       "contact": "Contact"
     }
   },
@@ -117,7 +119,8 @@
   "product": {
     "title_line1": "Rainbow City",
     "title_line2": "AI Soul Companion",
-    "subtitle": "Your personal AI companion for emotional growth and spiritual development",
+    "subtitle1": "Your personal AI companion",
+    "subtitle2": "for emotional growth and spiritual development",
     "description": "Born from the intersection of advanced AI technology and human-centric design, Rainbow City AI Soul Companion is more than just an AI - it's your dedicated partner in personal growth and emotional development. Through deep conversations and meaningful interactions, we help you navigate life's challenges while fostering spiritual and intellectual growth.",
     "cta": "Join the Waitlist",
     "values": {

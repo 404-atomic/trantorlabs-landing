@@ -23,11 +23,10 @@ export const About = () => {
     <Box
       component="section"
       id="about"
+      className="relative overflow-hidden bg-gradient-180 from-background to-primary-main/5"
       sx={{
         py: { xs: 10, md: 15 },
-        background: `linear-gradient(180deg, ${theme.palette.background.default} 0%, rgba(246, 177, 122, 0.03) 100%)`,
         position: 'relative',
-        overflow: 'hidden',
       }}
       ref={containerRef}
     >

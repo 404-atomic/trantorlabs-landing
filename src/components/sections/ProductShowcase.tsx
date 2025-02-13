@@ -125,7 +125,7 @@ export const ProductShowcase = () => {
         }}
       />
 
-      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
+      <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
         {/* Hero Section */}
         <Grid container spacing={{ xs: 6, md: 8 }} justifyContent="center" sx={{ mb: { xs: 10, md: 15 } }}>
           <Grid item xs={12} md={8}>
@@ -175,11 +175,12 @@ export const ProductShowcase = () => {
                     fontWeight: 600,
                     letterSpacing: '-0.01em',
                     fontSize: { xs: '1.75rem', sm: '1.75rem', md: '2.5rem' },
-                    maxWidth: '800px',
                     mx: 'auto',
                   }}
                 >
-                  {t('product.subtitle')}
+                  {t('product.subtitle1')}
+                  <br />
+                  {t('product.subtitle2')}
                 </Typography>
                 <Typography
                   variant="body1"
@@ -188,7 +189,6 @@ export const ProductShowcase = () => {
                     color: 'text.secondary',
                     fontSize: { xs: '1.1rem', sm: '1.2rem', md: '1.25rem' },
                     lineHeight: 1.6,
-                    maxWidth: '800px',
                     mx: 'auto',
                     opacity: 0.9,
                   }}
@@ -227,7 +227,7 @@ export const ProductShowcase = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <Box sx={{ borderBottom: 1, borderColor: 'divider', mb: 6 }}>
+            <Box sx={{ borderBottom: 1, borderColor: 'divider', mb: 6, maxWidth: '50vw', mx: 'auto' }}>
               <Tabs
                 value={activeTab}
                 onChange={handleTabChange}
@@ -264,6 +264,8 @@ export const ProductShowcase = () => {
                 sx={{ 
                   transition: 'opacity 0.3s ease',
                   opacity: activeTab === 0 ? 1 : 0,
+                  maxWidth: '1100px',
+                  mx: 'auto',
                 }}
               >
                 <Grid container spacing={4} justifyContent="center">
@@ -302,6 +304,7 @@ export const ProductShowcase = () => {
                             borderRadius: 2,
                             border: '1px solid rgba(255, 255, 255, 0.1)',
                             transition: 'all 0.3s ease',
+                            maxWidth: '400px',
                             '&:hover': {
                               background: 'rgba(255, 255, 255, 0.06)',
                               transform: 'translateY(-4px)',
@@ -356,6 +359,8 @@ export const ProductShowcase = () => {
                 sx={{ 
                   transition: 'opacity 0.3s ease',
                   opacity: activeTab === 1 ? 1 : 0,
+                  maxWidth: '1100px',
+                  mx: 'auto',
                 }}
               >
                 <Grid container spacing={4} justifyContent="center">
@@ -440,7 +445,7 @@ export const ProductShowcase = () => {
         </Box>
 
         {/* Development Roadmap */}
-        <Box sx={{ mb: { xs: 10, md: 15 } }}>
+        <Box sx={{ maxWidth: 1200, mx: 'auto', mb: { xs: 10, md: 15} }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

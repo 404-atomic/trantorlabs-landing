@@ -3,9 +3,11 @@
     "contact_us": "联系我们",
     "menu": {
       "about": "关于我们",
-      "services": "服务",
+      "business_areas": "业务领域",
       "products": "产品",
-      "contact": "联系"
+      "mission_vision": "使命与愿景",
+      "advantages": "优势",
+      "contact": "联系我们"
     }
   },
   "hero": {
@@ -131,7 +133,8 @@
   "product": {
     "title_line1": "彩虹城之",
     "title_line2": "AI灵魂伴侣",
-    "subtitle": "您的专属AI伴侣，陪伴您的情感成长与精神发展",
+    "subtitle1": "您的专属AI伴侣",
+    "subtitle2": "陪伴您的情感成长与精神发展",
     "description": "彩虹城之AI灵魂伴侣诞生于先进AI技术与以人为本设计的交汇点，它不仅仅是一个AI，更是您个人成长和情感发展的专属伙伴。通过深度对话和有意义的互动，我们帮助您应对生活挑战，同时促进精神和智力成长。",
     "cta": "加入等候名单",
     "values": {

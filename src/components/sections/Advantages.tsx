@@ -35,6 +35,7 @@ export const Advantages = () => {
   return (
     <Box
       component="section"
+      id="advantages"
       sx={{
         py: { xs: 10, md: 15 },
         background: `linear-gradient(180deg, ${theme.palette.background.default} 0%, rgba(246, 177, 122, 0.03) 100%)`,
