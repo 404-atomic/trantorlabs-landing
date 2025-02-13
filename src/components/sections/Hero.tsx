@@ -16,8 +16,11 @@ export const Hero = () => {
       sx={{
         position: 'relative',
         minHeight: '100vh',
+        py: { xs: 10, md: 15 },
+        px: { xs: 4, md: 20 },
         display: 'flex',
         alignItems: 'center',
+        justifyContent: 'center',
         overflow: 'hidden',
         background: `linear-gradient(135deg, ${COLORS.primary.dark}, ${COLORS.primary.main})`,
       }}
@@ -88,7 +91,7 @@ export const Hero = () => {
           transition={{ duration: 1 }}
           sx={{
             position: 'absolute',
-            top: { xs: '100px', sm: '350px', md: '210px' },
+            top: { xs: '100px', sm: '350px', md: '130px' },
             right: { xs: '0px', sm: '0', md: '40px' },
             width: { xs: '100%', sm: '70%', md: '60%' },
             height: '100%',
@@ -105,8 +108,6 @@ export const Hero = () => {
       <Container maxWidth="xl" sx={{ 
         position: 'relative', 
         zIndex: 1,
-        px: { xs: 3, sm: 4, md: 6 }, 
-        pt: { xs: 12, sm: 16, md: 0 } 
       }}>
         <Grid container spacing={4} alignItems="center">
           {/* Left content */}
@@ -123,7 +124,7 @@ export const Hero = () => {
                     xs: '3rem', 
                     sm: '4rem', 
                     md: '7rem', 
-                    lg: '8rem' 
+                    lg: '6rem' 
                   },
                   fontWeight: 800, 
                   color: 'white',

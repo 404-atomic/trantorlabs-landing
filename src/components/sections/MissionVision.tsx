@@ -8,6 +8,10 @@ import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import ExploreIcon from '@mui/icons-material/Explore';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import SmartToyIcon from '@mui/icons-material/SmartToy';
+import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
+import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
 
 interface Point {
   title: string;
@@ -38,6 +42,13 @@ const getIconForKey = (key: string) => {
   }
 };
 
+const visionIcons = [
+  RocketLaunchIcon,
+  SmartToyIcon,
+  HealthAndSafetyIcon,
+  PrecisionManufacturingIcon,
+];
+
 export const MissionVision = () => {
   const { t } = useTranslation();
 
@@ -56,7 +67,7 @@ export const MissionVision = () => {
         overflow: 'hidden',
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ width: '80%' }}>
         {/* Mission Section */}
         <Box sx={{ mb: { xs: 10, md: 15 } }}>
           <motion.div
@@ -180,49 +191,77 @@ export const MissionVision = () => {
             />
 
             <Grid container spacing={3}>
-              {points.map((point, index) => (
-                <Grid item xs={12} sm={6} md={3} key={index}>
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                  >
-                    <Box
-                      sx={{
-                        height: '350px',
-                        p: 3,
-                        background: 'rgba(255, 255, 255, 0.05)',
-                        backdropFilter: 'blur(10px)',
-                        borderRadius: 3,
-                        border: '1px solid rgba(255, 255, 255, 0.1)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        transition: 'all 0.3s ease',
-                        position: 'relative',
-                        overflow: 'hidden',
-                        '&:hover': {
-                          transform: 'translateY(-4px)',
-                          background: 'rgba(255, 255, 255, 0.08)',
-                          borderColor: 'rgba(255, 255, 255, 0.2)'
-                        }
-                      }}
+              {points.map((point, index) => {
+                const Icon = visionIcons[index];
+                return (
+                  <Grid item xs={12} sm={6} md={3} key={index}>
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
                     >
-                      <Typography 
-                        sx={{ 
-                          color: 'rgba(255, 255, 255, 0.9)',
-                          lineHeight: 1.7,
-                          textAlign: 'center',
-                          fontSize: '1.1rem'
+                      <Box
+                        sx={{
+                          height: '350px',
+                          p: 3,
+                          background: 'rgba(255, 255, 255, 0.05)',
+                          backdropFilter: 'blur(10px)',
+                          borderRadius: 3,
+                          border: '1px solid rgba(255, 255, 255, 0.1)',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          transition: 'all 0.3s ease',
+                          position: 'relative',
+                          overflow: 'hidden',
+                          '&:hover': {
+                            transform: 'translateY(-4px)',
+                            background: 'rgba(255, 255, 255, 0.08)',
+                            borderColor: 'rgba(255, 255, 255, 0.2)',
+                            '& .icon': {
+                              transform: 'scale(1.1) rotate(10deg)',
+                            }
+                          }
                         }}
                       >
-                        {point}
-                      </Typography>
-                    </Box>
-                  </motion.div>
-                </Grid>
-              ))}
+                        <motion.div
+                          className="icon"
+                          initial={{ scale: 0, rotate: -30 }}
+                          animate={{ scale: 1, rotate: 0 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 260,
+                            damping: 20,
+                            delay: 0.2 + index * 0.1
+                          }}
+                          style={{
+                            marginBottom: '24px',
+                            transition: 'transform 0.3s ease'
+                          }}
+                        >
+                          <Icon sx={{ 
+                            fontSize: '48px',
+                            color: COLORS.secondary.main,
+                            opacity: 0.9
+                          }} />
+                        </motion.div>
+                        <Typography 
+                          sx={{ 
+                            color: 'rgba(255, 255, 255, 0.9)',
+                            lineHeight: 1.7,
+                            textAlign: 'center',
+                            fontSize: '1.1rem'
+                          }}
+                        >
+                          {point}
+                        </Typography>
+                      </Box>
+                    </motion.div>
+                  </Grid>
+                );
+              })}
             </Grid>
           </motion.div>
         </Box>

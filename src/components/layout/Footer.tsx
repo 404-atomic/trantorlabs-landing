@@ -5,30 +5,30 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { COLORS } from '@/lib/constants/theme';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import XIcon from '@mui/icons-material/X';
+// import GitHubIcon from '@mui/icons-material/GitHub';
+// import XIcon from '@mui/icons-material/X';
 import EmailIcon from '@mui/icons-material/Email';
 import { Logo } from '@/components/common/Logo';
 import { useMemo } from 'react';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+// import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
-const socialLinks = [
-  {
-    name: 'GitHub',
-    icon: GitHubIcon,
-    href: 'https://github.com/TrantorLabs',
-  },
-  {
-    name: 'X',
-    icon: XIcon,
-    href: 'https://x.com/TrantorLabs',
-  },
-  {
-    name: 'WhatsApp',
-    icon: WhatsAppIcon,
-    href: 'https://wa.me/65891000000',
-  },
-];
+// const socialLinks = [
+//   {
+//     name: 'GitHub',
+//     icon: GitHubIcon,
+//     href: 'https://github.com/TrantorLabs',
+//   },
+//   {
+//     name: 'X',
+//     icon: XIcon,
+//     href: 'https://x.com/TrantorLabs',
+//   },
+//   {
+//     name: 'WhatsApp',
+//     icon: WhatsAppIcon,
+//     href: 'https://wa.me/65891000000',
+//   },
+// ];
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -74,7 +74,7 @@ export const Footer = () => {
               >
                 {t('footer.description')}
               </Typography>
-              <Box sx={{ display: 'flex', gap: 1 }}>
+              {/* <Box sx={{ display: 'flex', gap: 1 }}>
                 {socialLinks.map((social) => {
                   const Icon = social.icon;
                   return (
@@ -96,7 +96,7 @@ export const Footer = () => {
                     </IconButton>
                   );
                 })}
-              </Box>
+              </Box> */}
             </motion.div>
           </Grid>
 
