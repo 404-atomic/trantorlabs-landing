@@ -93,18 +93,19 @@ export const Advantages = () => {
                     elevation={0}
                     sx={{
                       p: 4,
-                      height: '100%',
+                      height: '350px',
                       borderRadius: 4,
-                      background: 'rgba(255, 255, 255, 0.8)',
+                      background: 'rgba(255, 255, 255, 0.9)', 
                       backdropFilter: 'blur(20px)',
-                      border: '1px solid rgba(246, 177, 122, 0.1)',
+                      border: '2px solid rgba(246, 177, 122, 0.3)',
                       transition: 'all 0.3s ease',
                       display: 'flex',
                       flexDirection: 'column',
+                      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
                       '&:hover': {
                         transform: 'translateY(-8px)',
-                        boxShadow: '0 12px 24px rgba(0, 0, 0, 0.05)',
-                        borderColor: 'rgba(246, 177, 122, 0.3)',
+                        boxShadow: '0 12px 24px rgba(0, 0, 0, 0.15)',
+                        borderColor: 'rgba(246, 177, 122, 0.5)', 
                         '& .icon': {
                           color: COLORS.secondary.main,
                         },

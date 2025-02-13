@@ -12,7 +12,7 @@
   },
   "hero": {
     "title": "TRANTOR LABS",
-    "subtitle": "An international tech startup dedicated to AI innovation and personal spiritual growth",
+    "subtitle": "An international tech startup dedicated to pioneering AI innovation and fostering personal spiritual growth. We blend cutting-edge technology with human-centric values to create transformative AI solutions that enrich lives and empower minds.",
     "cta": "Learn More",
     "illustration_alt": "AI Innovation Illustration",
     "contact_button": "Contact Us",
@@ -180,19 +180,19 @@
     "points": {
       "research": {
         "title": "Deep Research in AI Large Models",
-        "description": "Continuously advance quantization, fine-tuning, distillation, adaptation, and specialized performance optimization of open-source large models"
+        "description": "We are at the forefront of AI research, continuously advancing the development and optimization of large language models. Our team focuses on groundbreaking techniques in quantization, fine-tuning, distillation, and adaptation, ensuring that our models not only achieve superior performance but also maintain efficiency and accessibility. Through rigorous research and innovation, we're pushing the boundaries of what's possible in AI technology."
       },
       "exploration": {
         "title": "Explore AI-Human Spiritual Integration",
-        "description": "Create personalized AI agents that provide deeper emotional and spiritual companionship for users"
+        "description": "Our pioneering work in AI-human integration goes beyond conventional boundaries, exploring the profound connections between artificial intelligence and human consciousness. We're developing sophisticated AI agents that understand and respond to the complex emotional and spiritual needs of users, creating meaningful relationships that contribute to personal growth and self-discovery. This unique approach combines cutting-edge technology with deep human understanding."
       },
       "growth": {
         "title": "Empower Individual Growth",
-        "description": "Enable every user to receive personalized support and inspiration through AI large model technology"
+        "description": "We believe in the transformative power of personalized AI support for individual development. Our technology is designed to understand each user's unique journey, providing tailored guidance, insights, and encouragement that catalyze personal growth. By leveraging advanced AI capabilities, we create adaptive learning experiences that evolve with users, helping them unlock their full potential and achieve meaningful progress in their lives."
       },
       "society": {
         "title": "Drive Social and Industrial Progress",
-        "description": "Bring sustainable AI empowerment to Singapore and global markets through open collaboration and technological innovation"
+        "description": "Our commitment to social impact extends beyond individual users to encompass broader societal advancement. Through strategic partnerships and innovative solutions, we're helping industries and communities harness the power of AI for sustainable development. Our collaborative approach promotes knowledge sharing, ethical AI practices, and inclusive growth, ensuring that technological progress translates into tangible benefits for society at large."
       }
     }
   },
@@ -200,30 +200,31 @@
     "title": "Our Vision",
     "statement": "Become Singapore's most forward-thinking and humanistic AI large model innovation center, making AI not just about efficiency, but dedicated to companionship and growth.",
     "points": [
-      "International Leader in Large Model Technology Research",
-      "Most Humanized AI Agent Product Incubation Base",
-      "New Engine for Mental Health and Spiritual Growth",
-      "Key Force in Driving Social and Industrial Smart Upgrade"
+      "International Leader in Large Model Technology Research: Pioneering breakthrough innovations in AI model development and optimization, setting new standards for efficiency and performance in the global AI landscape",
+      "Most Humanized AI Agent Product Incubation Base: Creating the world's most sophisticated and empathetic AI companions that understand and adapt to human emotional and spiritual needs while fostering meaningful connections",
+      "New Engine for Mental Health and Spiritual Growth: Developing revolutionary AI solutions that provide personalized support for psychological wellbeing and spiritual development, making mental health resources more accessible and effective",
+      "Key Force in Driving Social and Industrial Smart Upgrade: Catalyzing technological transformation across industries while ensuring that AI advancement contributes positively to societal progress and human development"
     ]
   },
   "values": {
     "title": "Core Values",
+    "statement": "We believe that by staying true to these fundamental principles, we can create AI solutions that not only advance technology but also enrich human lives and contribute to a more harmonious future.",
     "items": {
       "innovation": {
         "title": "Frontier Innovation",
-        "description": "Continuously explore new modes of interaction between AI large models and human thought"
+        "description": "We are committed to pushing the boundaries of AI technology through continuous innovation and exploration. Our approach combines cutting-edge research with practical applications, ensuring that our technological advances are both groundbreaking and meaningful. We embrace challenges as opportunities for discovery and maintain an unwavering dedication to excellence in all our innovative endeavors."
       },
       "care": {
         "title": "Human Care",
-        "description": "Focus on personal spiritual needs, emphasizing AI's positive impact on personal growth"
+        "description": "At the heart of our work lies a deep commitment to human wellbeing and personal growth. We prioritize the human experience in every aspect of our technology development, ensuring that our AI solutions enhance rather than replace human connections. Our approach to human care extends beyond surface-level interactions to foster genuine understanding and meaningful support for individual development."
       },
       "openness": {
         "title": "Open Co-creation",
-        "description": "Actively embrace open-source spirit, collaborating with research institutions and communities"
+        "description": "We believe in the power of collaborative innovation and knowledge sharing. Our commitment to openness drives us to create inclusive environments where diverse perspectives can thrive and contribute to technological advancement. Through transparent practices and active engagement with our community, we foster an ecosystem of shared learning and collective growth."
       },
-      "practicality": {
-        "title": "Practical Implementation",
-        "description": "Ensure product usability and sustainability while advancing AI large model technology"
+      "ethics": {
+        "title": "Ethical Leadership",
+        "description": "We uphold the highest standards of ethical conduct in AI development and deployment. Our commitment to responsible innovation ensures that our technology serves the greater good while respecting individual privacy and promoting social justice. We lead by example in establishing ethical frameworks that guide the development of AI technology for human benefit."
       }
     }
   },

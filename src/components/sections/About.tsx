@@ -1,15 +1,13 @@
 'use client';
 
-import { Box, Container, Grid, Typography, useTheme } from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { COLORS } from '@/lib/constants/theme';
 import { useRef } from 'react';
-import Image from 'next/image';
 
 export const About = () => {
   const { t } = useTranslation();
-  const theme = useTheme();
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -30,33 +28,6 @@ export const About = () => {
       }}
       ref={containerRef}
     >
-      {/* Background Elements */}
-      <Box
-        sx={{
-          position: 'absolute',
-          top: '20%',
-          left: '5%',
-          width: '35vw',
-          height: '35vw',
-          background: `radial-gradient(circle, ${COLORS.primary.main}08 0%, transparent 70%)`,
-          borderRadius: '50%',
-          filter: 'blur(80px)',
-          zIndex: 0,
-        }}
-      />
-      <Box
-        sx={{
-          position: 'absolute',
-          bottom: '10%',
-          right: '5%',
-          width: '25vw',
-          height: '25vw',
-          background: `radial-gradient(circle, ${COLORS.secondary.main}08 0%, transparent 70%)`,
-          borderRadius: '50%',
-          filter: 'blur(60px)',
-          zIndex: 0,
-        }}
-      />
 
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
         <Grid container spacing={{ xs: 6, md: 8 }} alignItems="center">
@@ -111,41 +82,28 @@ export const About = () => {
             >
               <Box
                 sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
                   position: 'relative',
                   width: '100%',
-                  height: { xs: '300px', md: '400px' },
-                  borderRadius: 4,
+                  height: '100%',
                   overflow: 'hidden',
-                  boxShadow: '0 24px 48px rgba(0, 0, 0, 0.1)',
-                  background: theme.palette.background.paper,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  '&::before': {
-                    content: '""',
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    background: `linear-gradient(135deg, ${COLORS.secondary.main}10 0%, ${COLORS.primary.main}10 100%)`,
-                    zIndex: 1,
-                    pointerEvents: 'none',
-                  },
                 }}
               >
-                <Image
-                  src="/images/about-illustration.svg"
-                  alt={t('about.illustration_alt')}
-                  width={600}
-                  height={450}
-                  style={{ 
+                <Box
+                  component="video"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  src="/Untitled design.mp4"
+                  sx={{
                     maxWidth: '90%',
                     height: 'auto',
                     position: 'relative',
-                    zIndex: 2,
+                    zIndex: 1,
                   }}
-                  priority
                 />
               </Box>
             </motion.div>

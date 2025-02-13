@@ -1,25 +1,13 @@
 'use client';
 
-import { useState } from 'react';
-import {
-  Box,
-  Container,
-  Typography,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  Grid,
-  Card,
-  Divider,
-  Chip,
-} from '@mui/material';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Box, Container, Grid, Typography } from '@mui/material';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { COLORS } from '@/lib/constants/theme';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import DiamondIcon from '@mui/icons-material/Diamond';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import ExploreIcon from '@mui/icons-material/Explore';
+import PsychologyIcon from '@mui/icons-material/Psychology';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 
 interface Point {
   title: string;
@@ -35,268 +23,332 @@ interface ValueItem {
   description: string;
 }
 
+const getIconForKey = (key: string) => {
+  switch (key) {
+    case 'research':
+      return AutoAwesomeIcon;
+    case 'exploration':
+      return ExploreIcon;
+    case 'growth':
+      return PsychologyIcon;
+    case 'society':
+      return TrendingUpIcon;
+    default:
+      return AutoAwesomeIcon;
+  }
+};
+
 export const MissionVision = () => {
   const { t } = useTranslation();
-  const [expanded, setExpanded] = useState<string | false>('mission');
 
-  const handleChange = (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
-    setExpanded(isExpanded ? panel : false);
-  };
-
-  const AccordionTitle = ({ children, icon }: { children: React.ReactNode; icon: React.ReactNode }) => (
-    <Box sx={{ display: 'flex', alignItems: 'center', width: '100%', justifyContent: 'center', gap: 2, color: '#F6B17A' }}>
-      {icon}
-      <Typography
-        variant="h5"
-        sx={{
-          fontWeight: 700,
-          color: 'white',
-          textAlign: 'center',
-        }}
-      >
-        {children}
-      </Typography>
-    </Box>
-  );
-
-  const ContentCard = ({ children, highlight = false }: { children: React.ReactNode; highlight?: boolean }) => (
-    <Card
-      sx={{
-        p: 3,
-        height: '100%',
-        background: highlight ? 'rgba(255, 255, 255, 0.15)' : 'rgba(255, 255, 255, 0.08)',
-        backdropFilter: 'blur(10px)',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
-        borderRadius: 2,
-        transition: 'all 0.3s ease',
-        '&:hover': {
-          transform: 'translateY(-4px)',
-          background: highlight ? 'rgba(255, 255, 255, 0.18)' : 'rgba(255, 255, 255, 0.12)',
-          boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)',
-        },
-      }}
-    >
-      {children}
-    </Card>
-  );
+  // Safely get vision points with type checking
+  const visionPoints = t('vision.points', { returnObjects: true });
+  const points = Array.isArray(visionPoints) ? visionPoints : [];
 
   return (
     <Box
       component="section"
       id="mission-vision"
       sx={{
-        py: { xs: 10, md: 15 },
-        background: `linear-gradient(135deg, ${COLORS.primary.dark}, ${COLORS.primary.main})`,
-        position: 'relative',
+        py: { xs: 8, md: 12 },
+        background: `linear-gradient(180deg, ${COLORS.primary.dark}, ${COLORS.primary.main})`,
+        color: 'white',
         overflow: 'hidden',
       }}
     >
-      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <Box sx={{ maxWidth: 900, mx: 'auto' }}>
-            {/* Mission Accordion */}
-            <Accordion
-              expanded={expanded === 'mission'}
-              onChange={handleChange('mission')}
+      <Container maxWidth="xl">
+        {/* Mission Section */}
+        <Box sx={{ mb: { xs: 10, md: 15 } }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <Typography
+              variant="h2"
               sx={{
-                background: 'rgba(255, 255, 255, 0.1)',
-                backdropFilter: 'blur(10px)',
-                mb: 2,
-                '&:before': { display: 'none' },
-                boxShadow: 'none',
-                '& .MuiAccordionSummary-root': {
-                  borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-                },
+                fontSize: { xs: '2rem', md: '2.5rem' },
+                fontWeight: 600,
+                textAlign: 'center',
+                mb: 3
               }}
             >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: 'inherit' }} />}
-                sx={{ px: 4, py: 2 }}
-              >
-                <AccordionTitle icon={<RocketLaunchIcon sx={{ color: 'inherit' }} />}>
-                  {t('mission.title')}
-                </AccordionTitle>
-              </AccordionSummary>
-              <AccordionDetails sx={{ px: 4, py: 4 }}>
-                <AnimatePresence>
-                  <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <Typography
-                      component="div"
-                      dangerouslySetInnerHTML={{
-                        __html: t('mission.statement', {
-                          interpolation: { escapeValue: false },
-                        } as { interpolation: { escapeValue: boolean } }),
-                      }}
-                      sx={{ mb: 2 }}
-                    />
-                    <Divider sx={{ mb: 4, borderColor: 'rgba(255, 255, 255, 0.1)' }} />
-                    <Grid container spacing={3}>
-                      {Object.entries(t('mission.points', { returnObjects: true }) as TranslatedPoints).map(([key, point], index) => (
-                        <Grid item xs={12} sm={6} key={key}>
-                          <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 }}
-                          >
-                            <ContentCard highlight>
-                              <Typography variant="h6" sx={{ mb: 2, color: COLORS.secondary.main, fontWeight: 600 }}>
-                                {point.title}
-                              </Typography>
-                              <Typography sx={{ color: 'rgba(255, 255, 255, 0.8)', lineHeight: 1.7 }}>
-                                {point.description}
-                              </Typography>
-                            </ContentCard>
-                          </motion.div>
-                        </Grid>
-                      ))}
-                    </Grid>
-                  </motion.div>
-                </AnimatePresence>
-              </AccordionDetails>
-            </Accordion>
+              {t('mission.title')}
+            </Typography>
 
-            {/* Vision Accordion */}
-            <Accordion
-              expanded={expanded === 'vision'}
-              onChange={handleChange('vision')}
+            <Typography
+              component="div"
               sx={{
-                background: 'rgba(255, 255, 255, 0.1)',
-                backdropFilter: 'blur(10px)',
-                mb: 2,
-                '&:before': { display: 'none' },
-                boxShadow: 'none',
-                '& .MuiAccordionSummary-root': {
-                  borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-                },
+                fontSize: { xs: '1.1rem', md: '1.25rem' },
+                textAlign: 'center',
+                maxWidth: '900px',
+                mx: 'auto',
+                mb: 8,
+                color: 'rgba(255, 255, 255, 0.9)',
+                lineHeight: 1.7
               }}
-            >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: 'inherit' }} />}
-                sx={{ px: 4, py: 2 }}
-              >
-                <AccordionTitle icon={<VisibilityIcon sx={{ color: 'inherit' }} />}>
-                  {t('vision.title')}
-                </AccordionTitle>
-              </AccordionSummary>
-              <AccordionDetails sx={{ px: 4, py: 4 }}>
-                <AnimatePresence>
-                  <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <Typography
-                      component="div"
-                      dangerouslySetInnerHTML={{
-                        __html: t('vision.statement', {
-                          interpolation: { escapeValue: false },
-                        } as { interpolation: { escapeValue: boolean } }),
-                      }}
-                      sx={{ mb: 2 }}
-                    />
-                    <Divider sx={{ mb: 4, borderColor: 'rgba(255, 255, 255, 0.1)' }} />
-                    <Grid container spacing={2}>
-                      {Object.entries(t('vision.points', { returnObjects: true }) as TranslatedPoints).map(([key, point]) => (
-                        <Grid item xs={12} sm={6} md={3} key={key}>
-                          <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                          >
-                            <ContentCard>
-                              <Box sx={{ 
-                                display: 'flex', 
-                                alignItems: 'center', 
-                                justifyContent: 'center',
-                                textAlign: 'center' 
-                              }}>
-                                <Typography sx={{ color: 'rgba(255, 255, 255, 0.9)', lineHeight: 1.7 }}>
-                                  {point.description}
-                                </Typography>
-                              </Box>
-                            </ContentCard>
-                          </motion.div>
-                        </Grid>
-                      ))}
-                    </Grid>
-                  </motion.div>
-                </AnimatePresence>
-              </AccordionDetails>
-            </Accordion>
+              dangerouslySetInnerHTML={{
+                __html: t('mission.statement', {
+                  interpolation: { escapeValue: false },
+                }),
+              }}
+            />
 
-            {/* Values Accordion */}
-            <Accordion
-              expanded={expanded === 'values'}
-              onChange={handleChange('values')}
+            <Grid container spacing={4}>
+              {Object.entries(t('mission.points', { returnObjects: true }) as TranslatedPoints).map(([key, point], index) => {
+                const Icon = getIconForKey(key);
+                return (
+                  <Grid item xs={12} md={6} key={key}>
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                    >
+                      <Box
+                        sx={{
+                          p: 4,
+                          height: '100%',
+                          minHeight: '250px',
+                          background: 'rgba(255, 255, 255, 0.05)',
+                          backdropFilter: 'blur(10px)',
+                          borderRadius: 3,
+                          border: '1px solid rgba(255, 255, 255, 0.1)',
+                          transition: 'all 0.3s ease',
+                          '&:hover': {
+                            transform: 'translateY(-4px)',
+                            background: 'rgba(255, 255, 255, 0.08)',
+                            borderColor: 'rgba(255, 255, 255, 0.2)'
+                          }
+                        }}
+                      >
+                        <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                          <Icon sx={{ fontSize: 32, color: COLORS.secondary.main, mr: 2 }} />
+                          <Typography variant="h5" sx={{ fontWeight: 600 }}>
+                            {point.title}
+                          </Typography>
+                        </Box>
+                        <Typography sx={{ color: 'rgba(255, 255, 255, 0.9)', lineHeight: 1.7 }}>
+                          {point.description}
+                        </Typography>
+                      </Box>
+                    </motion.div>
+                  </Grid>
+                );
+              })}
+            </Grid>
+          </motion.div>
+        </Box>
+
+        {/* Vision Section */}
+        <Box>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <Typography
+              variant="h2"
               sx={{
-                background: 'rgba(255, 255, 255, 0.1)',
-                backdropFilter: 'blur(10px)',
-                '&:before': { display: 'none' },
-                boxShadow: 'none',
-                '& .MuiAccordionSummary-root': {
-                  borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-                },
+                fontSize: { xs: '2rem', md: '2.5rem' },
+                fontWeight: 600,
+                textAlign: 'center',
+                mb: 3
               }}
             >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: 'inherit' }} />}
-                sx={{ px: 4, py: 2 }}
-              >
-                <AccordionTitle icon={<DiamondIcon sx={{ color: 'inherit' }} />}>
-                  {t('values.title')}
-                </AccordionTitle>
-              </AccordionSummary>
-              <AccordionDetails sx={{ px: 4, py: 4 }}>
-                <AnimatePresence>
+              {t('vision.title')}
+            </Typography>
+
+            <Typography
+              component="div"
+              sx={{
+                fontSize: { xs: '1.1rem', md: '1.25rem' },
+                textAlign: 'center',
+                maxWidth: '900px',
+                mx: 'auto',
+                mb: 8,
+                color: 'rgba(255, 255, 255, 0.9)',
+                lineHeight: 1.7
+              }}
+              dangerouslySetInnerHTML={{
+                __html: t('vision.statement', {
+                  interpolation: { escapeValue: false },
+                }),
+              }}
+            />
+
+            <Grid container spacing={3}>
+              {points.map((point, index) => (
+                <Grid item xs={12} sm={6} md={3} key={index}>
                   <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.3 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
                   >
-                    <Grid container spacing={3}>
-                      {Object.entries(t('values.items', { returnObjects: true })).map(([key, value]: [string, ValueItem], index) => (
-                        <Grid item xs={12} sm={6} md={3} key={key}>
-                          <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 }}
-                          >
-                            <ContentCard>
-                              <Chip
-                                label={value.title}
-                                sx={{
-                                  mb: 2,
-                                  bgcolor: COLORS.secondary.main,
-                                  color: 'white',
-                                  fontWeight: 600,
-                                  '& .MuiChip-label': { px: 2 },
-                                }}
-                              />
-                              <Typography sx={{ color: 'rgba(255, 255, 255, 0.8)', lineHeight: 1.7 }}>
-                                {value.description}
-                              </Typography>
-                            </ContentCard>
-                          </motion.div>
-                        </Grid>
-                      ))}
-                    </Grid>
+                    <Box
+                      sx={{
+                        height: '350px',
+                        p: 3,
+                        background: 'rgba(255, 255, 255, 0.05)',
+                        backdropFilter: 'blur(10px)',
+                        borderRadius: 3,
+                        border: '1px solid rgba(255, 255, 255, 0.1)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        transition: 'all 0.3s ease',
+                        position: 'relative',
+                        overflow: 'hidden',
+                        '&:hover': {
+                          transform: 'translateY(-4px)',
+                          background: 'rgba(255, 255, 255, 0.08)',
+                          borderColor: 'rgba(255, 255, 255, 0.2)'
+                        }
+                      }}
+                    >
+                      <Typography 
+                        sx={{ 
+                          color: 'rgba(255, 255, 255, 0.9)',
+                          lineHeight: 1.7,
+                          textAlign: 'center',
+                          fontSize: '1.1rem'
+                        }}
+                      >
+                        {point}
+                      </Typography>
+                    </Box>
                   </motion.div>
-                </AnimatePresence>
-              </AccordionDetails>
-            </Accordion>
-          </Box>
-        </motion.div>
+                </Grid>
+              ))}
+            </Grid>
+          </motion.div>
+        </Box>
+
+        {/* Core Values Section */}
+        <Box sx={{ mt: { xs: 10, md: 15 } }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <Typography
+              variant="h2"
+              sx={{
+                fontSize: { xs: '2rem', md: '2.5rem' },
+                fontWeight: 600,
+                textAlign: 'center',
+                mb: 3
+              }}
+            >
+              {t('values.title')}
+            </Typography>
+
+            <Typography
+              component="div"
+              sx={{
+                fontSize: { xs: '1.1rem', md: '1.25rem' },
+                textAlign: 'center',
+                maxWidth: '900px',
+                mx: 'auto',
+                mb: 8,
+                color: 'rgba(255, 255, 255, 0.9)',
+                lineHeight: 1.7
+              }}
+              dangerouslySetInnerHTML={{
+                __html: t('values.statement', {
+                  interpolation: { escapeValue: false },
+                }),
+              }}
+            />
+
+            <Grid container spacing={3}>
+              {Object.entries(t('values.items', { returnObjects: true })).map(([key, value]: [string, ValueItem], index) => (
+                <Grid item xs={12} sm={6} md={3} key={key}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <Box
+                      sx={{
+                        height: '350px',
+                        p: 3,
+                        background: 'rgba(255, 255, 255, 0.05)',
+                        backdropFilter: 'blur(10px)',
+                        borderRadius: 3,
+                        border: '1px solid rgba(255, 255, 255, 0.1)',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        transition: 'all 0.3s ease',
+                        position: 'relative',
+                        overflow: 'hidden',
+                        '&:hover': {
+                          transform: 'translateY(-4px)',
+                          background: 'rgba(255, 255, 255, 0.08)',
+                          borderColor: 'rgba(255, 255, 255, 0.2)',
+                          '&::before': {
+                            transform: 'translateY(0)',
+                          }
+                        },
+                        '&::before': {
+                          content: '""',
+                          position: 'absolute',
+                          top: 0,
+                          left: 0,
+                          right: 0,
+                          height: '4px',
+                          background: `linear-gradient(90deg, ${COLORS.secondary.main}, ${COLORS.primary.light})`,
+                          transform: 'translateY(-100%)',
+                          transition: 'transform 0.3s ease'
+                        }
+                      }}
+                    >
+                      <Typography
+                        variant="h5"
+                        sx={{
+                          color: COLORS.secondary.main,
+                          fontWeight: 600,
+                          mb: 2,
+                          position: 'relative'
+                        }}
+                      >
+                        {value.title}
+                      </Typography>
+                      <Typography
+                        sx={{
+                          color: 'rgba(255, 255, 255, 0.9)',
+                          lineHeight: 1.7,
+                          fontSize: '1rem',
+                          overflow: 'auto',
+                          pr: 1,
+                          flex: 1,
+                          '&::-webkit-scrollbar': {
+                            width: '4px',
+                          },
+                          '&::-webkit-scrollbar-track': {
+                            background: 'rgba(255, 255, 255, 0.1)',
+                            borderRadius: '4px',
+                          },
+                          '&::-webkit-scrollbar-thumb': {
+                            background: 'rgba(255, 255, 255, 0.2)',
+                            borderRadius: '4px',
+                          }
+                        }}
+                      >
+                        {value.description}
+                      </Typography>
+                    </Box>
+                  </motion.div>
+                </Grid>
+              ))}
+            </Grid>
+          </motion.div>
+        </Box>
       </Container>
     </Box>
   );

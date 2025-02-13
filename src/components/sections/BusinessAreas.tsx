@@ -102,7 +102,7 @@ export const BusinessAreas = () => {
                   <Box
                     sx={{
                       p: 4,
-                      height: '100%',
+                      height: '400px',
                       background: 'rgba(255, 255, 255, 0.05)',
                       backdropFilter: 'blur(10px)',
                       borderRadius: 2,
