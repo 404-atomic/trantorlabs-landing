@@ -88,13 +88,13 @@ export const Hero = () => {
           transition={{ duration: 1 }}
           sx={{
             position: 'absolute',
-            top: { xs: '50px', sm: '350px', md: '210px' },
-            right: { xs: '10px', sm: '0', md: '40px' },
-            width: { xs: '90%', sm: '70%', md: '60%' },
+            top: { xs: '100px', sm: '350px', md: '210px' },
+            right: { xs: '0px', sm: '0', md: '40px' },
+            width: { xs: '100%', sm: '70%', md: '60%' },
             height: '100%',
             backgroundImage: 'url(/vecteezy_robotic-hand-holding-ai-artificial-intelligence-chip_24595814.png)',
-            backgroundSize: { xs: '120%', sm: '110%', md: 'contain' },
-            backgroundPosition: { xs: 'center bottom', md: 'right center' },
+            backgroundSize: { xs: '100%', sm: '110%', md: 'contain' },
+            backgroundPosition: { xs: 'center top', sm: 'center bottom', md: 'right center' },
             backgroundRepeat: 'no-repeat',
             filter: 'brightness(1.1) contrast(1.1)',
             transition: 'opacity 0.3s ease',
@@ -102,7 +102,12 @@ export const Hero = () => {
         />
       </Box>
 
-      <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
+      <Container maxWidth="xl" sx={{ 
+        position: 'relative', 
+        zIndex: 1,
+        px: { xs: 3, sm: 4, md: 6 }, 
+        pt: { xs: 12, sm: 16, md: 0 } 
+      }}>
         <Grid container spacing={4} alignItems="center">
           {/* Left content */}
           <Grid item xs={12} md={6}>
